@@ -1,0 +1,1012 @@
+/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+2025-08-27 17:34:19,365 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message"
+2025-08-27 17:34:19,365 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 151, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 9854, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "/Users/vladimirkopylov/bots/net_panic_bot/net_panic_bot.py", line 84, in tech_callback
+    bot.edit_message_text(f"<b>{title}</b>\n\n{text}", call.message.chat.id, call.message.message_id, parse_mode="HTML", reply_markup=kb)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 5081, in edit_message_text
+    result = apihelper.edit_message_text(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 1554, in edit_message_text
+    return _make_request(token, method_url, params=payload, method='post')
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+"
+2025-08-28 08:42:23,596 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:42:23,598 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:42:27,346 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:42:27,346 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:42:31,491 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:42:31,491 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:42:36,623 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:42:36,624 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:42:43,834 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:42:43,835 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:42:51,958 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:42:51,958 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:43:08,099 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:43:08,099 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:43:40,236 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:43:40,237 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:44:15,618 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:44:15,619 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:45:19,008 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:45:19,008 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:46:22,438 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:46:22,440 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:47:25,927 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:47:25,929 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:48:29,319 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:48:29,320 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:49:32,805 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:49:32,805 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:50:36,293 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:50:36,293 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:51:39,781 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:51:39,782 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:52:43,378 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:52:43,379 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:53:46,864 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:53:46,865 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:54:50,278 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:54:50,279 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:55:53,738 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:55:53,739 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:56:57,193 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:56:57,194 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:58:00,614 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:58:00,614 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 08:59:04,103 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 08:59:04,105 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:00:07,592 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:00:07,593 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:01:11,084 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:01:11,085 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:02:14,570 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:02:14,572 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:03:18,156 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:03:18,158 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:04:21,548 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:04:21,549 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:05:25,037 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:05:25,039 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:06:28,417 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:06:28,418 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:07:31,816 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:07:31,817 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:08:35,302 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:08:35,304 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:09:38,688 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:09:38,689 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:10:42,084 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:10:42,085 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:11:45,469 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:11:45,470 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:12:48,852 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:12:48,853 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:13:52,441 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:13:52,442 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:14:55,927 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:14:55,929 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:15:59,323 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:15:59,323 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:17:02,803 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:17:02,804 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:18:06,196 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:18:06,197 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:19:09,576 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:19:09,577 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:20:13,065 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:20:13,065 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:21:16,467 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:21:16,468 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:22:19,940 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:22:19,941 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:23:23,327 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:23:23,328 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"
+2025-08-28 09:24:26,918 (__init__.py:1241 MainThread) ERROR - TeleBot: "Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running"
+2025-08-28 09:24:26,919 (__init__.py:1243 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 1234, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 112, in raise_exceptions
+    raise self.exception_info
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/util.py", line 94, in run
+    task(*args, **kwargs)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 688, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/__init__.py", line 660, in get_updates
+    json_updates = apihelper.get_updates(
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 332, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 168, in _make_request
+    json_result = _check_result(method_name, result)
+  File "/Users/vladimirkopylov/Library/Python/3.9/lib/python/site-packages/telebot/apihelper.py", line 195, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+"

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/vladimirkopylov/bots/universal_bot.py", line 3, in <module>
+    from telegram import Update
+ModuleNotFoundError: No module named 'telegram'
