@@ -184,3 +184,84 @@ for BOT in "${BOTS[@]}"; do
 done
 
 echo "🚀 Все доступные боты ожили!"
+echo "🚀 Все боты запущены. Логи смотри в папке logs."
+echo "📂 Открываю VS Code..."
+code ~/bots
+#!/bin/bash
+# 🚀 Скрипт для запуска всех ботов
+
+BOTS_DIR=~/bots
+LOGS_DIR=$BOTS_DIR/logs
+
+# создаём папку для логов, если её нет
+mkdir -p $LOGS_DIR
+
+echo "🛑 Останавливаю старые процессы..."
+pkill -f "python3 $BOTS_DIR" || true
+
+echo "🔹 Запускаю ботов..."
+
+# === FDT Bot ===
+nohup python3 $BOTS_DIR/FDT_BOT_RF/fdt_bot.py > $LOGS_DIR/fdt_bot.log 2>&1 &
+echo "✅ FDT_BOT запущен (лог: $LOGS_DIR/fdt_bot.log)"
+
+# === PanicTab Bot ===
+nohup python3 $BOTS_DIR/panitab_bot/panitab_bot.py > $LOGS_DIR/panitab_bot.log 2>&1 &
+echo "✅ PANITAB_BOT запущен (лог: $LOGS_DIR/panitab_bot.log)"
+
+# === NET Panic Bot ===
+nohup python3 $BOTS_DIR/net_panic_bot/net_panic_bot.py > $LOGS_DIR/net_panic_bot.log 2>&1 &
+echo "✅ NET_PANIC_BOT запущен (лог: $LOGS_DIR/net_panic_bot.log)"
+
+# === Price Bot ===
+nohup python3 $BOTS_DIR/price_bot/price_bot.py > $LOGS_DIR/price_bot.log 2>&1 &
+echo "✅ PRICE_BOT запущен (лог: $LOGS_DIR/price_bot.log)"
+
+echo "🚀 Все боты запущены. Логи: $LOGS_DIR"
+echo "📂 Открываю VS Code..."
+
+# Открываем папку в VS Code
+code $BOTS_DIR
+
+
+#!/bin/bash
+echo "🔹 Останавливаем старые процессы..."
+pkill -f fdt_bot.py
+pkill -f price_bot.py
+
+echo "🔹 Запускаем ботов..."
+cd ~/bots/fdt_bot && source venv/bin/activate && nohup python3 fdt_bot.py > logs/fdt_bot.log 2>&1 &
+cd ~/bots/price_bot && source venv/bin/activate && nohup python3 price_bot.py > logs/price_bot.log 2>&1 &
+
+echo "✅ Все боты запущены. Логи: ~/bots/*/logs/"
+#!/bin/bash
+
+echo "🔹 Останавливаем старые процессы..."
+pkill -f FDT_CalcBot.py
+pkill -f fdt_bot.py
+pkill -f price_bot.py
+pkill -f fdt_ginecolog_bot.py
+
+echo "🔹 Активируем виртуальное окружение..."
+source ~/bots/FDT_CalcBot/venv/bin/activate
+
+mkdir -p ~/bots/FDT_CalcBot/logs
+mkdir -p ~/bots/fdt_bot/logs
+mkdir -p ~/bots/price_bot/logs
+mkdir -p ~/bots/fdt_ginecolog_bot/logs
+
+echo "🔹 Запускаем ботов..."
+
+nohup python3 ~/bots/FDT_CalcBot/FDT_CalcBot.py > ~/bots/FDT_CalcBot/logs/FDT_CalcBot.log 2>&1 &
+echo "✅ Запуск FDT_CalcBot..."
+
+nohup python3 ~/bots/fdt_bot/fdt_bot.py > ~/bots/fdt_bot/logs/fdt_bot.log 2>&1 &
+echo "✅ Запуск fdt_bot..."
+
+nohup python3 ~/bots/price_bot/price_bot.py > ~/bots/price_bot/logs/price_bot.log 2>&1 &
+echo "✅ Запуск price_bot..."
+
+nohup python3 ~/bots/fdt_ginecolog_bot/fdt_ginecolog_bot.py > ~/bots/fdt_ginecolog_bot/logs/fdt_ginecolog_bot.log 2>&1 &
+echo "✅ Запуск fdt_ginecolog_bot..."
+
+echo "🚀 Все боты запущены! Логи смотри в папках logs/"
